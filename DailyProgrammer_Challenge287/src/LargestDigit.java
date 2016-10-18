@@ -25,7 +25,7 @@ public class LargestDigit {
 		
 		for (int i = 0; i < Number.NUMBER_LENGTH; i++) {
 
-			int digit = Integer.parseInt(fullNumber) % 10;
+			int digit = num.stringToInt(fullNumber) % 10;
 
 			fullNumber = fullNumber.substring(0, fullNumber.length() - 1);
 			

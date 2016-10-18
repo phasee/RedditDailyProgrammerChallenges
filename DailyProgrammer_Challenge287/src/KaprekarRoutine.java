@@ -28,25 +28,56 @@ public class KaprekarRoutine  {
 		return arrayToStringAsc;
 	}
 	
+	public boolean compareKaprekarToInt(int comparison) {
+		
+		KaprekarRoutine kr1 = new KaprekarRoutine(ad.intToString(comparison));
+		KaprekarRoutine kr2 = new KaprekarRoutine(ad.intToString(KAPREKAR_NUMBER));
+		
+		return kr1.returnDescendingDigits().equals(kr2.returnDescendingDigits());
+	}
+	
 	public int returnKaprekarIteration() {
 
 		int count = 0;
 		
-		while (Integer.parseInt(ad.getNumber()) != KAPREKAR_NUMBER) {
+		while (!compareKaprekarToInt(ad.stringToInt(ad.getNumber()))) {
+			
 			String num1 = this.returnDescendingDigits();
 			String num2 = ad.returnAscendingDigits();
-			int returnNum = Integer.parseInt(num1) - Integer.parseInt(num2);
 			
-			if (num1.equals(num2) || returnNum == KAPREKAR_NUMBER) {
+			if (num1.equals(num2)) {
 				break;
 			}
-			ad.checkAndReturnFourDigitNumber("" + returnNum);
+			
+			int returnNum = ad.stringToInt(num1) - ad.stringToInt(num2);
+			
+			ad.checkAndReturnFourDigitNumber(ad.intToString(returnNum));
 	
-			ad.setNumber("" + returnNum);
+			ad.setNumber(ad.intToString(returnNum));
 			count++;
+
 		}
 		
 		return count;
+	}
+	
+	public int findHighestKaprekarIteration() {
+		
+		int iterator = 0;
+		int counter = 0;
+		
+		for (int i = 0; i < 9999; i++) {
+			
+			KaprekarRoutine kr = new KaprekarRoutine(ad.intToString(i));
+			
+			iterator = kr.returnKaprekarIteration();
+			
+			if (iterator > counter) {
+				counter = iterator;
+			}
+		}
+		
+		return counter;
 	}
 	
 	@Override

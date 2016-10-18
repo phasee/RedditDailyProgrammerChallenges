@@ -23,7 +23,7 @@ public class AscendingDigits extends Number  {
 		
 		for (int i = 0; i < Number.NUMBER_LENGTH; i++) {
 
-			int digit = Integer.parseInt(number) % 10;
+			int digit = stringToInt(number) % 10;
 			number = number.substring(0, number.length() - 1);
 			
 			numberArray[i] = digit;

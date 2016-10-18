@@ -15,6 +15,7 @@ public class LargestDigitTest {
 		System.out.println(largestDigit.toString());
 		System.out.println(ad.toString());
 		System.out.println(kr.toString());
+		System.out.println("The highest Kaprekar Routine Iteration: " + kr.findHighestKaprekarIteration());
 		
 		in.close();
 

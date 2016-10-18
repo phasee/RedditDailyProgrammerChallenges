@@ -18,6 +18,14 @@ public class Number {
 		this.number = number;
 	}
 	
+	public int stringToInt(String number) {
+		return Integer.parseInt(number);
+	}
+	
+	public String intToString(int number) {
+		return Integer.toString(number);
+	}
+	
 	public int getLengthOfNumber() {
 		int length = String.valueOf(number).length();
 		
