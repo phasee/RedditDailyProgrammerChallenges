@@ -44,7 +44,7 @@ public class Number {
 		
 		for (int i = 0; i < getLengthOfNumber(); i++) {
 			result = String.format("%1$0" + NUMBER_LENGTH + "d", 
-									Integer.parseInt(number));
+									stringToInt(number));
 		}
 		
 		return result;
