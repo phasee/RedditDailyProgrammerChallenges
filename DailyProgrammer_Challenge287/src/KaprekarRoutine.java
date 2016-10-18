@@ -29,22 +29,21 @@ public class KaprekarRoutine  {
 	}
 	
 	public int returnKaprekarIteration() {
-		
-		int returnNum;
+
 		int count = 0;
 		
 		while (Integer.parseInt(ad.getNumber()) != KAPREKAR_NUMBER) {
-			int num1 = Integer.parseInt(this.returnDescendingDigits());
-			int num2 = Integer.parseInt(ad.returnAscendingDigits());
+			String num1 = this.returnDescendingDigits();
+			String num2 = ad.returnAscendingDigits();
+			int returnNum = Integer.parseInt(num1) - Integer.parseInt(num2);
 			
-			if (!(num1 == num2)) {
-				returnNum = num1 - num2;
-				ad.setNumber("" + returnNum);
-				count++;
-			} else {
+			if (num1.equals(num2) || returnNum == KAPREKAR_NUMBER) {
 				break;
 			}
-			
+			ad.checkAndReturnFourDigitNumber("" + returnNum);
+	
+			ad.setNumber("" + returnNum);
+			count++;
 		}
 		
 		return count;

@@ -26,7 +26,7 @@ public class Number {
 	
 	public boolean checkNumberIsFourDigit() {
 		
-		return (getLengthOfNumber() == Number.NUMBER_LENGTH);
+		return (getLengthOfNumber() == NUMBER_LENGTH);
 		
 	}
 	
@@ -40,6 +40,13 @@ public class Number {
 		}
 		
 		return result;
+	}
+	
+	public void checkAndReturnFourDigitNumber(String number) {
+		
+		if (!checkNumberIsFourDigit()) {
+			makeNumberFourDigits(number);
+		}
 	}
 	
 
