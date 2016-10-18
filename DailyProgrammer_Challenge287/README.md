@@ -5,11 +5,11 @@ My Solution to Kaprekar's Routine
 
 Write a function that, given a 4-digit number, returns the largest digit in that number. Numbers between 0 and 999 are counted as 4-digit numbers with leading 0's.
 
-largest_digit(1234) -> 4
-largest_digit(3253) -> 5
-largest_digit(9800) -> 9
-largest_digit(3333) -> 3
-largest_digit(120) -> 2
+largest_digit(1234) -> 4 
+largest_digit(3253) -> 5 
+largest_digit(9800) -> 9 
+largest_digit(3333) -> 3 
+largest_digit(120) -> 2 
 
 In the last example, given an input of 120, we treat it as the 4-digit number 0120.
 
@@ -19,11 +19,11 @@ Today's challenge is really more of a warmup for the bonuses. If you were able t
 
 Write a function that, given a 4-digit number, performs the "descending digits" operation. This operation returns a number with the same 4 digits sorted in descending order.
 
-desc_digits(1234) -> 4321
-desc_digits(3253) -> 5332
-desc_digits(9800) -> 9800
-desc_digits(3333) -> 3333
-desc_digits(120) -> 2100
+desc_digits(1234) -> 4321 
+desc_digits(3253) -> 5332 
+desc_digits(9800) -> 9800 
+desc_digits(3333) -> 3333 
+desc_digits(120) -> 2100 
 
 # Bonus 2
 
@@ -33,9 +33,9 @@ Given a 4-digit number that has at least two different digits, take that number'
 
 Once you get to 6174 you'll stay there if you repeat the process. In this case we applied the process 2 times before reaching 6174, so our output for 6589 is 2.
 
-kaprekar(6589) -> 2
-kaprekar(5455) -> 5
-kaprekar(6174) -> 0
+kaprekar(6589) -> 2 
+kaprekar(5455) -> 5 
+kaprekar(6174) -> 0 
 
 Numbers like 3333 would immediately go to 0 under this routine, but since we require at least two different digits in the input, all numbers will eventually reach 6174, which is known as Kaprekar's Constant. Watch this video if you're still unclear on how Kaprekar's Routine works.
 
